@@ -1,0 +1,17 @@
+Java中类不允许多重继承，但是却可以允许实现多个接口， 但是Java8中接口允许default方法提供实现， 那么如果在多个接口中写
+了同样的签名和返回类型的函数实际上带来了多重继承的问题， 那么java是怎么解决的呢？
+1 如果一个类实现了两个接口，而这两个接口中各自定义了一个同名的default方法 编译器会报错 
+java: class Clazz inherits unrelated defaults for foo() from types A and B 
+要解决冲突就要在实现接口的类中重载那个方法解决冲突
+
+2 那么菱形继承的情况呢 接口A 派生出 a1 a2 两个接口并在A中添加default方法foo()  
+  2.1 类B实现a1 a2 两个接口运行时没有问题的，可以成功调用A.foo（）方法; 
+  2.2 在a1 a2 中分别重写default方法后，编译器报错与1中描绘情形类似
+  2.3 当仅在a1 中重写default方法后，编译器同样没用报错，不过这次执行的是a1中的实现
+    
+总结： 当类实现的接口继承结构中有同名的default方法时，类必须给以重新实现，并且可以通过SomeInterface.Super.SomeDefaultMethod() 方式调用
+
+另外 当设计代码时发现有重复的default方法时可能需要考虑放到抽象类中，而不是接口中去了 从这一方面来说即使Interface提供了default方法，也不意味着它可以
+取代抽象类
+    
+    
