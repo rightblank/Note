@@ -1,0 +1,5 @@
+1 @AutoWired 添加依赖给set方法 或构造器
+2 syste-rules 包的SystemOutRule 类可以捕捉控制台输出
+3 @ComponetScan 可以从指定的包或类所在的包进行组件扫描，不指定时从当前包扫描
+  移除ComponetScan时从Configuration中指定的bean进行加载 当然也可以从xml进行加载
+4 Spring中创建的bean默认都是singleton模式
