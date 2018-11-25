@@ -3,7 +3,8 @@
   rest是分布式系统的一种架构方式，它并不是标准而是一组限制条件，比如无状态，c/s结构，统一的接口
 
 
-<head3>一 Rest 原则</head3>
+一 Rest 原则
+##
     1 资源：展现易于理解 的目录结构URI
     2 表示：使用json 或者xml表示数据对象或者属性(attribute)
     3 消息：显示使用HTTP方式 (GET, POST, PUT, DELETE等)
@@ -11,6 +12,7 @@
   
   
 二 HTTP方式实现REST CRUD (create, retrieve, update, delete)
+##
     1 GET： retieve data， 幂等操作
     2 POST: 让服务器对提交的实体进行某种操作，通常为添加，但也可以做修改操作
     3 PUT：执行创建或更新操作，与post区别是 PUT是幂等操作
@@ -19,6 +21,7 @@
     
   
 三 HTTP状态码
+##
 1XX - informational
 2XX - success
 3XX - redirection
