@@ -3,7 +3,7 @@
   rest是分布式系统的一种架构方式，它并不是标准而是一组限制条件，比如无状态，c/s结构，统一的接口
 
 
-一 Rest 原则
+<head3>一 Rest 原则</head3>
     1 资源：展现易于理解 的目录结构URI
     2 表示：使用json 或者xml表示数据对象或者属性(attribute)
     3 消息：显示使用HTTP方式 (GET, POST, PUT, DELETE等)
